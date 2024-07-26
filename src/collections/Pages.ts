@@ -17,7 +17,7 @@ import { HoverCards } from '../blocks/HoverCards'
 import { HoverHighlights } from '../blocks/HoverHighlights'
 import { LinkGrid } from '../blocks/LinkGrid'
 import { LogoGrid } from '../blocks/LogoGrid'
-import { MediaBlock } from '../blocks/Media'
+// import { MediaBlock } from '../blocks/Media'
 import { MediaContent } from '../blocks/MediaContent'
 import { Pricing } from '../blocks/Pricing'
 import { ReusableContent } from '../blocks/ReusableContent'
@@ -119,7 +119,7 @@ export const Pages: CollectionConfig = {
                 HoverHighlights,
                 LinkGrid,
                 LogoGrid,
-                MediaBlock,
+                // MediaBlock,
                 MediaContent,
                 MediaContentAccordion,
                 Pricing,

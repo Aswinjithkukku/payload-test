@@ -10,7 +10,7 @@ import path from 'path'
 import { buildConfig } from 'payload/config'
 
 import { Announcements } from './collections/Announcements'
-// import { CaseStudies } from './collections/CaseStudies'
+import { CaseStudies } from './collections/CaseStudies'
 import { CommunityHelp } from './collections/CommunityHelp'
 import { Docs } from './collections/Docs'
 import { Media } from './collections/Media'
@@ -44,7 +44,7 @@ export default buildConfig({
   },
   collections: [
     Announcements,
-    // CaseStudies,
+    CaseStudies,
     CommunityHelp,
     Docs,
     Media,
