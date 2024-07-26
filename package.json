@@ -1,5 +1,5 @@
 {
-  "name": ".",
+  "name": "faircode-payload-backend",
   "description": "Blank template - no collections",
   "version": "1.0.0",
   "main": "dist/server.js",
