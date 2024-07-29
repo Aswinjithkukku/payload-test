@@ -168,6 +168,6 @@ dist
 # Apple MacOS operating system
 .DS_Store
 
-media
-build
-.vercel
+# media
+# build
+# .vercel
