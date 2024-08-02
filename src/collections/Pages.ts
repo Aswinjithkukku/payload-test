@@ -52,7 +52,10 @@ dotenv.config({
   path: path.resolve(__dirname, '../../.env'),
 })
 
-export const generatePreviewPath = ({ path }) => `/${path}`
+export const generatePreviewPath = ({ path }) => `${path}`
+
+
+console.log(process.env);
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
