@@ -56,10 +56,16 @@ export const Pages: CollectionConfig = {
         const path = generatePreviewPath({
           path: `/${typeof data?.slug === 'string' ? data.slug : ''}`,
         })
+        console.log(process.env.PAYLOAD_PUBLIC_APP_URL, path)
+
         return `${process.env.PAYLOAD_PUBLIC_APP_URL}${path}`
       },
     },
-    preview: doc => formatPreviewURL('pages', doc),
+    preview: doc => {
+      console.log(formatPreviewURL('pages', doc), " -doc");
+      
+      return formatPreviewURL('pages', doc)
+    },
     defaultColumns: ['fullTitle', 'slug', 'createdAt', 'updatedAt'],
   },
   versions: {
