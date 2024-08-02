@@ -45,6 +45,13 @@ import TestimonialBlock from '../blocks/TestimonialBlock'
 import ArticleBlock from '../blocks/ArticleBlock'
 import StyledTextBlock from '../blocks/StyledTextBlock'
 
+import dotenv from 'dotenv'
+import path from 'path'
+
+dotenv.config({
+  path: path.resolve(__dirname, '../../.env'),
+})
+
 export const generatePreviewPath = ({ path }) => `/${path}`
 
 export const Pages: CollectionConfig = {
@@ -62,8 +69,8 @@ export const Pages: CollectionConfig = {
       },
     },
     preview: doc => {
-      console.log(formatPreviewURL('pages', doc), " -doc");
-      
+      console.log(formatPreviewURL('pages', doc), ' -doc')
+
       return formatPreviewURL('pages', doc)
     },
     defaultColumns: ['fullTitle', 'slug', 'createdAt', 'updatedAt'],
