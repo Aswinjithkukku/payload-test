@@ -45,17 +45,7 @@ import TestimonialBlock from '../blocks/TestimonialBlock'
 import ArticleBlock from '../blocks/ArticleBlock'
 import StyledTextBlock from '../blocks/StyledTextBlock'
 
-import dotenv from 'dotenv'
-import path from 'path'
-
-dotenv.config({
-  path: path.resolve(__dirname, '../../.env'),
-})
-
 export const generatePreviewPath = ({ path }) => `${path}`
-
-
-console.log(process.env);
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -66,13 +56,12 @@ export const Pages: CollectionConfig = {
         const path = generatePreviewPath({
           path: `/${typeof data?.slug === 'string' ? data.slug : ''}`,
         })
-        console.log(process.env.PAYLOAD_PUBLIC_APP_URL, path)
-
-        return `${process.env.PAYLOAD_PUBLIC_APP_URL}${path}`
+        return `${
+          process.env.PAYLOAD_PUBLIC_APP_URL || 'https://faircode-payload-frontend.vercel.app'
+        }${path}`
       },
     },
     preview: doc => {
-      console.log(formatPreviewURL('pages', doc), ' -doc')
 
       return formatPreviewURL('pages', doc)
     },

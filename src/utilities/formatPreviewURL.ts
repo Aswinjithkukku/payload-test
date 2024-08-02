@@ -8,8 +8,7 @@ export const formatPreviewURL = (
   //   collection,
   //   doc,
   // )}&secret=${process.env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
-  return `${process.env.PAYLOAD_PUBLIC_APP_URL}/${formatPagePath(
-    collection,
-    doc,
-  )}`
+  return `${
+    process.env.PAYLOAD_PUBLIC_APP_URL || 'https://faircode-payload-frontend.vercel.app'
+  }/${formatPagePath(collection, doc)}`
 }
