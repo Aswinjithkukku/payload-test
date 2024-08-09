@@ -44,6 +44,7 @@ import FeaturedBlock from '../blocks/FeaturedBlock'
 import TestimonialBlock from '../blocks/TestimonialBlock'
 import ArticleBlock from '../blocks/ArticleBlock'
 import StyledTextBlock from '../blocks/StyledTextBlock'
+import NewsBlock from '../blocks/NewsBlock'
 
 export const generatePreviewPath = ({ path }) => `${path}`
 
@@ -147,6 +148,7 @@ export const Pages: CollectionConfig = {
                 TestimonialBlock,
                 ArticleBlock,
                 StyledTextBlock,
+                NewsBlock,
               ],
             },
           ],
